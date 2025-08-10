@@ -4,8 +4,8 @@
 > Enter a valid directory
 
 
-Issue #1 
-Q: 
+
+
 > [!WARNING]
 > "I put "Downloads" as my directory and it says its invalid"
 > Enter C:\users\(name)\Downloads **do not use abbreviations**
