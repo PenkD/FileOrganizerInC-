@@ -4,6 +4,8 @@ Enter a valid directory
 
 Issue #1 
 Q: "I put "Downloads" for my directory and it says its invalid"
+
+
 A: Enter C:\users\(name)\Downloads
 
 
