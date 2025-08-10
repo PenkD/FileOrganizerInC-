@@ -1,5 +1,13 @@
+# File Organizer
+Download the EXE and run
+Enter a valid directory
 
-Build it with my code if you're not comfortable running the EXE.
+Issue #1 
+Q: "I put "Downloads" for my directory and it says its invalid"
+A: Enter C:\users\(name)\Downloads
+
+
+Build it with my code if you're not comfortable running the EXE or just use the python script (you can view the code easily).
 https://visualstudio.microsoft.com/downloads/
 Made in C# console app 
 
