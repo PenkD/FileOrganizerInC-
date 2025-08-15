@@ -3,18 +3,15 @@
 > Download the EXE and run
 > Enter a valid directory
 
-
-
-
-> [!WARNING]
-> "I put "Downloads" as my directory and it says its invalid"
-> Enter C:\users\ (name)\Downloads **do not use abbreviations**
+>[!NOTE]
+>B1.1
+>added shortcuts, you can now use downloads, desktop, documents, pictures, music, and videos instead of typing the entire location
 
 
 
 
 > [!TIP]
->Build it with my code with [Visual Studio Console APP](https://visualstudio.microsoft.com/downloads/) if you're not comfortable running the EXE or just use the [python script](https://github.com/PenkD/FileOrganizer) (you can view the code easily).
+>Build it with my code in [Visual Studio Console APP](https://visualstudio.microsoft.com/downloads/) if you're not comfortable running the EXE or just use the [python script](https://github.com/PenkD/FileOrganizer) (you can view the code easily).
 
 
 <3
