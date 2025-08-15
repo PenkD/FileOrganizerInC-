@@ -1,3 +1,8 @@
+using System.Threading;
+
+
+
+
 
 class FileOrganizer
 {
@@ -191,6 +196,8 @@ class FileOrganizer
 
 
         Console.WriteLine("Moved files.");
-
+        Console.WriteLine("App will auto close in 3 seconds.");
+        Thread.Sleep(3000);
+        
     }
 }
