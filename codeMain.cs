@@ -84,28 +84,68 @@ class FileOrganizer
     static void Main(string[] args)
     {
         
-        Console.Title = "file organizer";
-
-        string path = "";
+        Console.Title = "File Organizer B 1.1";
+        string userName = Environment.UserName; 
+        string path2 = "";
+        
         while (true)
         {
             Console.WriteLine("Enter a folder path: ");
-            path = Console.ReadLine()?.Trim();
+            path2 = Console.ReadLine()?.Trim().ToLower();
 
-            if (Directory.Exists(path))
+            if (Directory.Exists(path2))
             {
                 break; // exits the loop
             }
             else
             {
-                Console.WriteLine("Invalid path.\n");
+                
+                if (path2.Equals("downloads")) { 
+                    path2 = $@"C:\users\{userName}\Downloads";
+                    break;
+                }
+                if (path2.Equals("desktop"))
+                {
+                    path2 = $@"C:\users\{userName}\Desktop";
+                    break;
+                }
+                if (path2.Equals("videos"))
+                {
+                    path2 = $@"C:\users\{userName}\Videos";
+                    Console.WriteLine(path2);
+                    break;
+                }
+
+                if (path2.Equals("documents"))
+                {
+                    path2 = $@"C:\users\{userName}\Documents";
+                    Console.WriteLine(path2);
+                    break;
+                }
+                if (path2.Equals("pictures"))
+                {
+                    path2 = $@"C:\users\{userName}\Pictures";
+                    Console.WriteLine(path2);
+                    break;
+                }
+                if (path2.Equals("music"))
+                {
+                    path2 = $@"C:\users\{userName}\Music";
+                    break;
+                }
+
+                else
+                {
+                    Console.WriteLine("Invalid path.\n");
+                }
+
             }
         }
 
         Console.WriteLine("Cleaning path...");
 
-
-        string[] files = Directory.GetFiles(path);
+        
+        string[] files = Directory.GetFiles(path2);
 
         foreach (string filepath in files)
         {
@@ -118,13 +158,20 @@ class FileOrganizer
 
 
                 string folderNames = folderType[extension];
-                string targetFolder = Path.Combine(path, folderNames);
+                string targetFolder = Path.Combine(path2, folderNames);
                 string fileName = Path.GetFileName(filepath);
                 string destPath = Path.Combine(targetFolder, fileName);
 
 
                 try
                 {
+
+                    if (!Directory.Exists(targetFolder))
+                    {
+                        Directory.CreateDirectory(targetFolder);
+                    }
+
+
                     File.Move(filepath, destPath);
                     Console.WriteLine($"moved {fileName} to {folderNames}");
 
